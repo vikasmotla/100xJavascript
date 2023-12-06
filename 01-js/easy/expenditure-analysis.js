@@ -6,7 +6,18 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
-  return [];
+  let spentByCategory = [];
+  transactions.forEach(element => {
+    let categoryName = element.category;
+    let categoryObj = spentByCategory.find(categoryObj => categoryObj.category===categoryName);
+    if(!categoryObj){
+      spentByCategory.push({category: categoryName, totalSpent: element.price});
+    }
+    else{
+      categoryObj.totalSpent+=element.price;
+    } 
+  });
+  return spentByCategory;
 }
 
 module.exports = calculateTotalSpentByCategory;

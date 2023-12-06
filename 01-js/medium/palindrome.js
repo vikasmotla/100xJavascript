@@ -4,7 +4,20 @@
 */
 
 function isPalindrome(str) {
-  return true;
+  let str1 = str.toLowerCase().split("");
+  let str2 = str.toLowerCase().split("").reverse();
+
+  console.log(str1);
+  console.log(str2);
+
+  let palindrom = true;
+  for (let index = 0; index < str1.length; index++) {
+    if(str1[index]!=str2[index]){
+      palindrom = false;
+      break;
+    }
+  }
+  return palindrom;
 }
 
 module.exports = isPalindrome;
