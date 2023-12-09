@@ -16,6 +16,38 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+  add(number) {
+    this.result = this.result + number;
+  }
+  sub(number) {
+    this.result = this.result - number;
+  }
+  mul(number) {
+    this.result = this.result * number;
+  }
+  devide(number) {
+    this.result = this.result/number;
+  }
+  clear(){
+    this.result = 0;
+  }
+  getResult(){
+    return this.result;
+  }
+  calculate(expression){
+    return this.result;
+  }
+}
+
+let calc = new Calculator(0);
+console.log(calc.add(3));
+console.log(calc.add(4));
+console.log(calc.mul(2));
+console.log(calc.clear());
+console.log(calc.getResult());
 
 module.exports = Calculator;
