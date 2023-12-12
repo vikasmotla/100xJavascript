@@ -15,6 +15,7 @@ function objectMethods(obj) {
   console.log("After hasOwnProperty():", hasProp);
 
   let newObj = Object.assign({}, obj, { newProperty: "newValue" });
+  // empty objest is just syntax, obj is obj1, new obj properties. it will behave like concat.
   console.log("After Object.assign():", newObj);
 
 
